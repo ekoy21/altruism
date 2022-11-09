@@ -1,0 +1,21 @@
+import java.util.*;
+public class Edchris{       
+  public static void main(String[] args){   
+   Scanner console = new Scanner (System.in);     
+    int a = 0, b = 0, z = 0;
+    char receiver;	 
+    do{
+        System.out.println("\nWould you like to enter grades?\nY-yes\nN-no");  
+        System.out.print("=> ");
+        receiver = console.next().charAt(0);
+        
+        if((receiver == 'y')||(receiver == 'Y')){ 
+        System.out.print("Enter a grade: "); 
+        a = console.nextInt();           
+              b+=a;             
+              z++; 
+        }   	        	
+    }while((receiver == 'y')||(receiver == 'Y'));	     
+	    System.out.print("\nThe Average of Grades is: " +(b/z));
+}
+}
