@@ -1,0 +1,105 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner console = new Scanner(System.in);
+		String[] item = new String[]{" "," "," "," "," "," "," "," "," "};
+		int a, i, iB=0, iA=0, iN=0, iY=0, iJ=0, iP=0, iO=0, iRC=0, iR=0, catchOrder, secondcatchOrder, foodCategory=0, bangus=0, adobo=0, ngoyong=0, crispy=0, mang=0, piatos=0, cola=0, rc=0, royal=0;
+		int totalQuantity = 0;
+		System.out.println("|=======[ SIRA-SIRA STORE]=======|");
+			System.out.println("|              WELCOME           |");
+		System.out.println("|________________________________|");
+		System.out.println("\nDo you want to order? [1]-Yes [2]-No:");
+			catchOrder = console.nextInt();
+		do{
+			if(catchOrder == 1){
+		    System.out.println("|=======[ SIRA-SIRA STORE]=======|");
+			System.out.println("Foods:\n[1] Fried Bangus : P35.00\n[2] Adobo        : P25.00\n[3] Ngoyong      : P20.00");
+			System.out.println("Snacks:\n[1] Crispy Patata: P7.00\n[2] Mang Juan    : P7.00\n[3] Piatos       : P14.00");
+			System.out.println("Beverages:\n[1] Coca~Cola    : P13.00\n[2] RC           : P12.00\n[3] Royal        : P15.00");
+	    	System.out.println("|________________________________|");            System.out.println("\nChoose [1]Food [2]Snacks [3]Beverages");
+	    	foodCategory = console.nextInt();
+    }
+    switch(foodCategory){
+    case 1: 
+              System.out.println("Category : [Foods]");
+               
+              System.out.print("Choose number on FOODs Menu: ");
+              a = console.nextInt();
+              System.out.print("Quantity: ");
+              i = console.nextInt();
+              if(a == 1){
+                  iB += i;
+                  bangus = 35*iB;
+                  item[0] = ("Fried Bangus x"+iB+"="+bangus+"\n");}
+              else if( a == 2){
+                  iA += i;
+                  adobo = 25*iA;
+                  item[1] = ("Adobo x"+iA+"="+adobo+"\n");}
+               else if( a == 3){
+                  iN += i;
+                  ngoyong = 20*iN;
+                  item[2] = ("Ngoyong x"+iN+"="+ngoyong+"\n");}
+  
+    break;
+    case 2:
+              System.out.println("Category : [Snacks]");
+               
+              System.out.print("Choose number on FOODs Menu: ");
+              a = console.nextInt();
+              System.out.print("Quantity: ");
+              i = console.nextInt();
+              if(a == 1){
+                  iY += i;
+                  crispy = 7*iP;
+                  item[3] = ("Crispy Patata x"+iY+"="+crispy+"\n");}
+              else if( a == 2){
+                  iJ += i;
+                  mang = 7*iJ;
+                  item[4] = ("Mang Juan x"+iJ+"="+mang+"\n");}
+               else if( a == 3){
+                  iP += i;
+                  piatos = 14*iP;
+                  item[5] = ("Piatos x"+iP+"="+piatos+"\n");}
+    break;
+    case 3:
+              System.out.println("Category : [Beverages]");            
+              System.out.print("Choose number on FOODs Menu: ");
+              a = console.nextInt();
+              System.out.print("Quantity: ");
+              i = console.nextInt();
+              if(a == 1){
+                  iO += i;
+                  cola = 13*iO;
+                  item[6] = ("Coca~cola x"+iO+"="+cola+"\n");}
+              else if( a == 2){
+                  iRC += i;
+                  rc = 12*iRC;
+                  item[7] = ("Adobo x"+iRC+"="+rc+"\n");}
+               else if( a == 3){
+                  iR += i;
+                  royal = 20*iR;
+                  item[8] = ("Ngoyong x"+iR+"="+royal+"\n");}
+    break;
+    default:
+                 System.out.print("Please chose only from above list!");
+    break;
+             }
+             System.out.println(" Add more? [1] Yes [2]No:");
+             secondcatchOrder = console.nextInt();
+            }while(secondcatchOrder == 1);                     System.out.println("\n\n");
+            System.out.println("|=======[ SIRA-SIRA STORE]=======|");
+            System.out.println("\n");
+             System.out.println("\t"+item[0]);
+             System.out.println("\t"+item[1]);
+             System.out.println("\t"+item[2]);
+             System.out.println("\t"+item[3]);
+             System.out.println("\t"+item[4]);
+             System.out.println("\t"+item[5]);
+             System.out.println("\t"+item[6]);
+             System.out.println("\t"+item[7]);
+             System.out.println("\t"+item[8]);
+             
+            System.out.println("\n\tBill===========P"+(bangus+adobo+ngoyong+crispy+mang+piatos+ cola+rc+royal));
+             System.out.println("|________________________________|");      
+	}
+}
